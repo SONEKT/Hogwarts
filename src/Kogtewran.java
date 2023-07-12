@@ -16,6 +16,7 @@ public class Kogtewran extends Hogwarts {
     @Override
     public String toString() {
         return "Kogtewran{" +
+                super.toString() +
                 "shy=" + shy +
                 ", mind=" + mind +
                 ", funny=" + funny +
@@ -24,17 +25,18 @@ public class Kogtewran extends Hogwarts {
     }
 
     public void comareTo(Kogtewran other) {
-        int thisCount = this.shy + this.mind + this.funny+ this.creative;
-        int otherCount = this.shy + this.mind + this.funny+ this.creative;
+        int thisCount = this.shy + this.mind + this.funny + this.creative;
+        int otherCount = other.shy + other.mind + other.funny + other.creative;
 
         if (thisCount > otherCount) {
             printComparingResult(this, other);
-        } else if (thisCount > otherCount) {
+        } else if (thisCount < otherCount) {
             printComparingResult(other, this);
         } else {
             System.out.println("Студенты одинаково сильны");
         }
     }
+
     private void printComparingResult(Kogtewran bestStudent, Kogtewran worseStudent) {
         System.out.println(bestStudent.getName() + " " + bestStudent.getSurname() + " Лучший Когтевранец чем " +
                 worseStudent.getName() + " " + worseStudent.getSurname());

@@ -22,11 +22,11 @@ public class Hufflepuff extends Hogwarts {
     }
     public void comareTo(Hufflepuff other) {
         int thisCount = this.hardworking + this.loyalty + this.honestly;
-        int otherCount = this.hardworking + this.loyalty + this.honestly;
+        int otherCount = other.hardworking + other.loyalty + other.honestly;
 
         if (thisCount > otherCount) {
             printComparingResult(this, other);
-        } else if (thisCount > otherCount) {
+        } else if (thisCount < otherCount) {
             printComparingResult(other, this);
         } else {
             System.out.println("Студенты одинаково сильны");

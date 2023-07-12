@@ -18,6 +18,7 @@ public class Slitherin extends Hogwarts {
     @Override
     public String toString() {
         return "Slitherin{" +
+                super.toString() +
                 "tricky=" + tricky +
                 ", initiative=" + initiative +
                 ", ambition=" + ambition +
@@ -28,11 +29,11 @@ public class Slitherin extends Hogwarts {
 
     public void comareTo(Slitherin other) {
         int thisCount = this.tricky + this.initiative + this.ambition + this.wantsPower + this.smart;
-        int otherCount = this.tricky + this.initiative + this.ambition + this.wantsPower + this.smart;
+        int otherCount = other.tricky + other.initiative + other.ambition + other.wantsPower + other.smart;
 
         if (thisCount > otherCount) {
             printComparingResult(this, other);
-        } else if (thisCount > otherCount) {
+        } else if (thisCount < otherCount) {
             printComparingResult(other, this);
         } else {
             System.out.println("Студенты одинаково сильны");

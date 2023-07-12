@@ -26,11 +26,11 @@ public class Gryffindor extends Hogwarts {
 
     public void comareTo(Gryffindor other) {
         int thisCount = this.bravery + this.honor + this.nobility;
-        int otherCount = this.bravery + this.honor + this.nobility;
+        int otherCount = other.bravery + other.honor + other.nobility;
 
         if (thisCount > otherCount) {
             printComparingResult(this, other);
-        } else if (thisCount > otherCount) {
+        } else if (thisCount < otherCount) {
             printComparingResult(other, this);
         } else {
             System.out.println("Студенты одинаково сильны");

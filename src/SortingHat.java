@@ -31,5 +31,12 @@ public class SortingHat {
                 random(), random(), random());
         Slitherin gregori = new Slitherin("Gregori", "Goil", random(), random(), random(), random(),
                 random(), random(), random());
+
+        hary.comareTo(ron);
+        sedrik.comareTo(zaharia);
+        jhou.comareTo(padan);
+        drako.comareTo(gregori);
+        hary.comareTo(drako);
+        System.out.println(hary.toString());
     }
 }

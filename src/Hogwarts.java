@@ -31,11 +31,11 @@ public abstract class Hogwarts {
     }
     public void comareTo(Hogwarts other) {
         int thisCount = this.magic + this.transfiguration;
-        int otherCount = this.magic + this.transfiguration;
+        int otherCount = other.magic + other.transfiguration;
 
         if (thisCount > otherCount) {
             printComparingResult(this, other);
-        } else if (thisCount > otherCount) {
+        } else if (thisCount < otherCount) {
             printComparingResult(other, this);
         } else {
             System.out.println("Студенты одинаково сильны");
